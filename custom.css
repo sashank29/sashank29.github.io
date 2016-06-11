@@ -42,9 +42,6 @@ body {
   padding: 30px;
 }
 
-.name {
-    padding-left:38%;
-}
 
 /*
  * Header
@@ -146,22 +143,28 @@ body {
 }*/
 
 /* Extra small devices (phones, less than 768px) */
-@media (max-width: @screen-xs-max) { 
+@media (max-width: 768px) { 
     .name {
        text-align:center;
     }
 }
 /* Small devices (tablets, 768px and up) */
-@media (min-width: @screen-sm-min) {
-    
+@media (min-width: 768px) {
+   .name {
+    padding-left:38%;
+    }
 }
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: @screen-md-min) { 
-   
+@media (min-width: 992px) { 
+   .name {
+    padding-left:38%;
+    }
 }
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg-min) { 
-   
+@media (min-width: 1200px) { 
+   .name {
+    padding-left:38%;
+    }
 }
