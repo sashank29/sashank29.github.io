@@ -151,8 +151,7 @@ body {
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-sm-min) {
     .name {
-       padding-left:inherit;
-       text-align:center;
+          text-align:center;
     }
 }
 
