@@ -26,10 +26,14 @@ a:hover {
 
 html,
 body {
-  padding-top: 5px;    
-  height: 100%;
-  background-color: #159957;
-  background-image: linear-gradient(120deg, #155799, #159957);
+    padding-top: 5px;    
+    height: 100%;
+    background: #152f99; /* Old browsers */
+    background: -moz-linear-gradient(left,  #152f99 0%, #15997f 99%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #152f99 0%,#15997f 99%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #152f99 0%,#15997f 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#152f99', endColorstr='#15997f',GradientType=1 ); /* IE6-9 */
+
 }
 
 body {
@@ -46,9 +50,13 @@ body {
 /*
  * Header
  */
-.masthead-brand {
+.header {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.header nav {
+padding-top:20px;
 }
 
 .masthead-nav > li {
