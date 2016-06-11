@@ -55,9 +55,6 @@ body {
   margin-bottom: 10px;
 }
 
-.header nav {
-padding-top:20px;
-}
 
 .masthead-nav > li {
   display: inline-block;
@@ -154,13 +151,22 @@ padding-top:20px;
 @media (max-width: 768px) { 
     .name {
        text-align:center;
+    } 
+
+    html,body {
+       background: #152f99;
     }
+    
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
    .name {
     padding-left:38%;
     }
+   .header nav {
+    padding-top:20px;
+    }
+
 }
 
 /* Medium devices (desktops, 992px and up) */
