@@ -11,6 +11,7 @@ a:hover {
 .nav a
 {
   color: #fff;
+  text-shadow:none;
 }
 
 /* Custom default button */
