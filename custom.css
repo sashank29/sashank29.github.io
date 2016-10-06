@@ -63,20 +63,20 @@ body {
 
 .intro-section {
     height: 100%;
-    padding-top: 40px;
+    padding-top: 150px;
     text-align: center;
    
 }
 
 .posts-section {
     height: 100%;
-    padding-top: 40px;
+    padding-top: 150px;
     text-align: center;   
 }
 
 .contact-section {
     height: 100%;
-    padding-top: 40px;
+    padding-top: 150px;
     text-align: center;
     position:relative;
 }
