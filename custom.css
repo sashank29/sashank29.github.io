@@ -104,16 +104,22 @@ body {
     }
   
     .intro-section {
-      padding-top: 150px;
+    height: 100%;
+    padding-top: 150px;
     text-align: center;   
     }
 
     .posts-section {
-      padding-top: 150px;       
+      height: 100%;
+      padding-top: 150px;
+      text-align: center;   
     }
 
     .contact-section {
-      padding-top: 150px;
+        height: 100%;
+        padding-top: 150px;
+        text-align: center;
+        position:relative;
     }
     
 }
