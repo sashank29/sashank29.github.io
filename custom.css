@@ -20,7 +20,7 @@ a:hover {
 }
 
 .navbar-fixed-top, .navbar-fixed-bottom {
-  position: static;
+  position: relative;
 }
 
 /* Custom default button */
