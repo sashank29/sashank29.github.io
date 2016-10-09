@@ -19,10 +19,6 @@ a:hover {
   text-shadow:none;
 }
 
-.navbar-fixed-top {
-  top: -70px; /* you'll have to figure out the exact number here */
-}
-
 .navbar-fixed-top, .navbar-fixed-bottom {
   position: static;
 }
