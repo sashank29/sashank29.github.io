@@ -21,7 +21,7 @@
     <nav class="navbar-fixed-top">
        <div class="container">
           <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+              <button type="button" id="navButton"class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
                 <span class="glyphicon glyphicon-menu-hamburger"></span>
               </button>      
           </div>
@@ -94,7 +94,7 @@
             $('[data-toggle="offcanvas"]').click(function () {
                 $('.row-offcanvas').toggleClass('active')
             });
-            $().click(function(){
+            $('#navButton').click(function(){
                 $('.navbar-toggle').toggle(
                     function(){
                         $("#user_button").addClass("bgCol");
