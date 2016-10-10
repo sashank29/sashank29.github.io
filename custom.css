@@ -145,7 +145,17 @@ body {
     top: 0;
     width: 50%; /* 6 columns */
   }
-    
+  .intro-section {
+    padding-top: 0px;    
+  }
+
+  .posts-section {
+      padding-top: 40px;  
+  } 
+
+  .contact-section {
+    padding-top: 0px;
+   }    
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
