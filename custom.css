@@ -22,10 +22,6 @@ a:hover {
 .navbar-fixed-top, .navbar-fixed-bottom {
   position: relative;
 }*/
-.navbar-toggle,.navbar-collapse .collapse .in
-{
-  background-color:black;
-}
 /* Custom default button */
 .btn-default,
 .btn-default:hover,
