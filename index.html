@@ -94,6 +94,16 @@
             $('[data-toggle="offcanvas"]').click(function () {
                 $('.row-offcanvas').toggleClass('active')
             });
+            $().click(function(){
+                $('.navbar-toggle').toggle(
+                    function(){
+                        $("#user_button").addClass("bgCol");
+                    },
+                    function(){
+                        $("#user_button").removeClass("bgCol");
+                    }
+                );
+            });
         });
     </script>
 </body>
