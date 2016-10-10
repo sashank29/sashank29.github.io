@@ -95,14 +95,7 @@
                 $('.row-offcanvas').toggleClass('active')
             });
             $('#navButton').click(function(){
-                $('.navbar-fixed-top').toggle(
-                    function(){
-                        $(".navbar-fixed-top").addClass("bgCol");
-                    },
-                    function(){
-                        $(".navbar-fixed-top").removeClass("bgCol");
-                    }
-                );
+                $('.navbar-fixed-top').toggleClass("bgCol");                
             });
         });
     </script>
