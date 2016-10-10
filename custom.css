@@ -18,6 +18,10 @@ a:hover {
   color:#000;
   text-shadow:none;
 }
+.navbar-collapse .collapse .in
+{
+  background-color:black;
+}
 /*
 .navbar-fixed-top, .navbar-fixed-bottom {
   position: relative;
