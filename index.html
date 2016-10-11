@@ -98,6 +98,11 @@
                 $("button.navbar-toggle").click();
                 $('.navbar-fixed-top').removeClass("bgCol");                
             });*/
+            $(document).click(function (){
+                var _opened = $(".navbar-collapse").hasClass("in");
+                if(_opened)
+	                $('.navbar-collapse').removeClass('in');
+            });
         });
     </script>
 </body>
