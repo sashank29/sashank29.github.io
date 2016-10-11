@@ -98,10 +98,17 @@
                 $("button.navbar-toggle").click();
                 $('.navbar-fixed-top').removeClass("bgCol");                
             });*/
+            $('#navButton').click(function(){
+                $('.navbar-fixed-top').addClass("bgCol");                
+            });
+
             $(document).click(function (){
                 var _opened = $(".navbar-collapse").hasClass("in");
                 if(_opened)
-	                $('.navbar-collapse').removeClass('in');
+		{
+	           $('.navbar-fixed-top').removeClass("bgCol");
+		   $('.navbar-collapse').removeClass('in');			
+		}
             });
         });
     </script>
