@@ -65,7 +65,10 @@ body {
     position:relative;
 }
 .cntact-section h1{
-  text-alignment:center;
+  text-align:center;
+}
+.footerDesc{
+    text-align:center;
 }
 
 /*
@@ -107,6 +110,12 @@ body {
   .contact-section {
     padding-top: 15px;
    }    
+  .cntact-section h1{
+    text-align:center;
+  }
+  .footerDesc{
+    text-align:center;
+  }
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
