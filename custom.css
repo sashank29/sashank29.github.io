@@ -64,6 +64,14 @@ body {
     padding-top: 40px;
     position:relative;
 }
+.contact-section .container{
+  height:500px;
+}
+.custVerticalAlign{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
 .contact-section h1{
   text-align:center;
 }
@@ -90,6 +98,8 @@ body {
   right:0px;
   bottom:0px;
 }
+
+
 
 
 
