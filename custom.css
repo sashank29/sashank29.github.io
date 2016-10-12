@@ -63,6 +63,7 @@ body {
     height: 100%;
     padding-top: 40px;
     position:relative;
+    text-align:center;
 }
 .contact-section .container{
   height:500px;
@@ -72,12 +73,12 @@ body {
     top: 50%;
     transform: translateY(-50%);
 }
-.contact-section h1{
+/*.contact-section h1{
   text-align:center;
 }
 .footerDesc{
     text-align:center;
-}
+}*/
 
 /*
  * Header
@@ -120,12 +121,12 @@ body {
   .contact-section {
     padding-top: 15px;
    }    
-  .contact-section h1{
+ /* .contact-section h1{
     text-align:center;
   }
   .footerDesc{
     text-align:center;
-  }
+  }*/
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
