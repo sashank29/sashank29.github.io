@@ -1,8 +1,3 @@
-//  import geoFindMe from './getInfo.js';
-  import React from 'react';
-  import ReactDOM from 'react-dom';
-  import jQuery from 'jquery';
-
   class RenderResult extends React.Component{
   constructor(props){
   super(props);
