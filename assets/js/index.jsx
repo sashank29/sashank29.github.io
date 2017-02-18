@@ -2,7 +2,7 @@
   constructor(props){
   super(props);
   this.state = {country:'',
-  stat:'',
+  specific:'',
   temp:'',
   description:''};
   this.success = this.success.bind(this);
@@ -21,10 +21,10 @@
            if(httpRequest.status === 200){
              let weatherData = JSON.parse(httpRequest.responseText);
              let country = weatherData["sys"]["country"];
-             let stat = weatherData["name"];
+             let specific = weatherData["name"];
              let description = weatherData["weather"][0]["description"];
              let temp = weatherData["main"]["temp"];
-             this.setState({country:country,stat:stat,temp:temp,description:description});
+             this.setState({country:country,specific:specefic,temp:temp,description:description});
 
          }
        }
@@ -49,8 +49,7 @@
   Get Weather Info
   </button></p>
   <ul>
-  <li>Country - {this.state.country}</li>
-  <li>State - {this.state.stat}</li>
+  <li>Location - {this.state.country}, {this.state.specific}</li>
   <li>Weather Description - {this.state.description}</li>
   <li>Temperature - {this.state.temp}</li>
   </ul>
