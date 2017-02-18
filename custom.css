@@ -55,8 +55,11 @@ body {
 
 .posts-section {
     height: 100%;
-    padding-top: 40px;  
-    color:black;
+    padding-top: 40px;      
+}
+
+.panel{
+  color:black;
 }
 
 .contact-section {
