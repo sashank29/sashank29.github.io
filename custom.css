@@ -49,8 +49,12 @@ body {
 
 .intro-section {
     height: 100%;
-    padding-top: 40px;
-    text-align: center;   
+    padding-top: 40px;    
+}
+
+#intro{
+  margin: 4%;
+  font-size:17px;
 }
 
 .posts-section {
