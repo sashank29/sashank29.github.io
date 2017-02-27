@@ -3,7 +3,7 @@
   super(props);
   this.state = {country:'',
   area:'',
-  temp:'',
+  temp:0,
   description:''};
   this.success = this.success.bind(this);
   this.geoFindMe = this.geoFindMe.bind(this);
@@ -43,9 +43,9 @@
   }
 
   render(){
-    let loc = <span>{this.state.country} , {this.state.area}</span>;
+    let loc = ((this.state.area).length===0)?(<span></span>):(<span>{this.state.country} , {this.state.area}</span>);
     let t = this.state.temp - 273.15;
-    let temp = <span>{t} *C</span>;
+    let temp = (t===-273.15)? (<span></span>):(<span>{t} *C</span>);
   return(
   <div>
   <p><button onClick={this.geoFindMe}>
