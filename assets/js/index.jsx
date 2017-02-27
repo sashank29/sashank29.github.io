@@ -43,15 +43,17 @@
   }
 
   render(){
+    let loc = {this.state.country}+" , "+{this.state.area};
+    let temp = this.state.temp - 273.15 + "*C";
   return(
   <div>
   <p><button onClick={this.geoFindMe}>
   Get Weather Info
   </button></p>
   <ul>
-  <li>Location - {this.state.country}, {this.state.area}</li>
+  <li>Location - {loc}</li>
   <li>Weather Description - {this.state.description}</li>
-  <li>Temperature - {this.state.temp}</li>
+  <li>Temperature - {temp}</li>
   </ul>
   </div>
   );
