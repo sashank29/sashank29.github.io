@@ -43,8 +43,8 @@
   }
 
   render(){
-    let loc = ""+{this.state.country}+" , "+{this.state.area};
-    let temp = ""+({this.state.temp} - 273.15) + "*C";
+    let loc = <span>{this.state.country} , {this.state.area}</span>;
+    let temp = <span>{{this.state.temp} - 273.15} *C</span>;
   return(
   <div>
   <p><button onClick={this.geoFindMe}>
