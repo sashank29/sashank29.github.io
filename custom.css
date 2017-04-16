@@ -1,22 +1,11 @@
-/*
- * Globals
- */
-
 /* Links */
-/*a,
-a:focus,
-a:hover {
-  color: #fff;
-}*/
 .nav a
 {
-  color: #fff;
-  /*text-shadow:none;*/
+  color: #fff;  
 }
 .nav a:focus,.nav a:hover
 {
   color:#000;
-  /*text-shadow:none;*/
 }
 .bgCol
 {
@@ -81,13 +70,6 @@ body {
     transform: translateY(-50%);
     height:20%;
 }
-/*.contact-section h1{
-  text-align:center;
-}
-.footerDesc{
-    text-align:center;
-}*/
-
 /*
  * Header
  */
@@ -108,10 +90,6 @@ body {
   bottom:0px;
 }
 
-
-
-
-
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 768px) { 
     html,body {
@@ -128,13 +106,7 @@ body {
 
   .contact-section {
     padding-top: 15px;
-   }    
- /* .contact-section h1{
-    text-align:center;
-  }
-  .footerDesc{
-    text-align:center;
-  }*/
+   }     
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
