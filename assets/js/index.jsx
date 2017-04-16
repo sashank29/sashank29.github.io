@@ -23,7 +23,7 @@
              let country = weatherData["sys"]["country"];
              let area = weatherData["name"];
              let description = weatherData["weather"][0]["description"];
-             let temp = (parseFloat(weatherData["main"]["temp"])).toPrecision(4);
+             let temp = (parseFloat(weatherData["main"]["temp"])).toPrecision(5);
              this.setState({country:country,area:area,temp:temp,description:description});
 
          }
@@ -44,7 +44,7 @@
 
   render(){
     let loc = ((this.state.area).length===0)?(<span></span>):(<span>{this.state.country} , {this.state.area}</span>);
-    let t = (this.state.temp - 273.15).toPrecision(4);
+    let t = (this.state.temp - 273.15).toPrecision(5);
     let temp = (t===-273.15)? (<span></span>):(<span>{t} &#8451;</span>);
   return(
   <div>
