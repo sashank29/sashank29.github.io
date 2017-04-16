@@ -44,7 +44,7 @@
 
   render(){
     let loc = ((this.state.area).length===0)?(<span></span>):(<span>{this.state.country} , {this.state.area}</span>);
-    let t = this.state.temp - 273.15;
+    let t = (this.state.temp - 273.15).toPrecision(4);
     let temp = (t===-273.15)? (<span></span>):(<span>{t} &#8451;</span>);
   return(
   <div>
