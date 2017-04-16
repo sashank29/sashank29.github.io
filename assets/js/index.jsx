@@ -23,7 +23,7 @@
              let country = weatherData["sys"]["country"];
              let area = weatherData["name"];
              let description = weatherData["weather"][0]["description"];
-             let temp = parseFloat(weatherData["main"]["temp"]);
+             let temp = (parseFloat(weatherData["main"]["temp"])).toPrecision(4);
              this.setState({country:country,area:area,temp:temp,description:description});
 
          }
