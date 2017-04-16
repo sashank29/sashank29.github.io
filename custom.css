@@ -11,12 +11,12 @@ a:hover {
 .nav a
 {
   color: #fff;
-  text-shadow:none;
+  /*text-shadow:none;*/
 }
 .nav a:focus,.nav a:hover
 {
   color:#000;
-  text-shadow:none;
+  /*text-shadow:none;*/
 }
 .bgCol
 {
@@ -44,7 +44,7 @@ body {
 
 body {
   color: #fff;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  /*text-shadow: 0 1px 3px rgba(0,0,0,.5);*/
 }
 
 .intro-section {
