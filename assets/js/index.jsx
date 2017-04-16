@@ -45,11 +45,11 @@
   render(){
     let loc = ((this.state.area).length===0)?(<span></span>):(<span>{this.state.country} , {this.state.area}</span>);
     let t = this.state.temp - 273.15;
-    let temp = (t===-273.15)? (<span></span>):(<span>{t} *C</span>);
+    let temp = (t===-273.15)? (<span></span>):(<span>{t} &#8451;</span>);
   return(
   <div>
   <p><button onClick={this.geoFindMe}>
-  Get Weather Info
+  Get your local weather Information 
   </button></p>
   <ul>
   <li>Location - {loc}</li>
