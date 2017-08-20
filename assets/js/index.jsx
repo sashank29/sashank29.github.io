@@ -61,4 +61,97 @@
   }
   }
 
-  ReactDOM.render(<RenderResult/>,document.getElementById('out'));
+class Run extends React.Component {
+    
+    constructor(props) {
+        super(props);
+        this.imgArray = new Array();
+        for(let i=0;i<12;i++){
+          this.imgArray[i] = (i+1)+'.png';
+        }
+        this.state = { image: this.imgArray[0],pos:12,pad:0 };        
+        this.changeImage = this.changeImage.bind(this);
+        this.startRunning = this.startRunning.bind(this);
+        this.stopRunning = this.stopRunning.bind(this);                
+        this.intervalHooks = new Array();
+    }
+
+    startRunning() {
+      this.intervalHooks.push(setInterval(() => {this.changeImage()},150));      
+      //this.setState({interval:intervalHooks});
+    }
+    
+    stopRunning() {
+       for (var i=0; i < this.intervalHooks.length; i++) {
+        clearInterval(this.intervalHooks[i]);
+    }     
+
+      //clearInterval(this.state.interval);
+    }
+
+    componentWillUnmount(){
+      clearInterval(this.intervalHooks);
+    }
+
+    changeImage(){
+      let currentPos = this.state.pos; 
+      let width = window.innerWidth; 
+      let incPad = this.state.pad+25;
+      if(incPad>width)
+      incPad = width;    
+      let newPad = incPad%width;
+      this.setState({image:this.imgArray[(currentPos%12)],pos:(currentPos+1),pad:newPad});
+    }
+  
+    render() {
+        return (
+          <div>
+            <div style={{paddingLeft:this.state.pad,height:95}}>
+              <img src={this.state.image}></img>              
+            </div>
+            <button type="button" onClick={this.startRunning} >Make him run! faster n faster..</button>
+            <button type="button" onClick={this.stopRunning} >Stop him</button>
+            </div>
+            );
+    }
+}
+
+
+class ColorMe extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { colour: this.getRandomColor() };
+        this.getRandomColor = this.getRandomColor.bind(this);
+        this.changeColor = this.changeColor.bind(this);
+    }
+
+    getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    changeColor() {
+        let color = this.getRandomColor();
+        this.setState({ colour: color });
+    }
+
+    componentDidMount() {
+      setInterval(() => {this.changeColor()},
+      1000
+    );
+  }
+
+    render() {
+        return (
+            <div style={{padding:20,backgroundColor:this.state.colour}} onMouseOver ={this.changeColor}>              
+            </div>
+            );
+    }
+}
+
+ReactDOM.render(<Run/>, document.getElementById('runExp'));
+ReactDOM.render(<RenderResult/>,document.getElementById('out'));
