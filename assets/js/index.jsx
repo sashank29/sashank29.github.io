@@ -95,7 +95,7 @@ class Run extends React.Component {
 
     changeImage(){
       let currentPos = this.state.pos; 
-      let width = document.getElementById("runExp").innerWidth; 
+      let width = this.reqDiv.offsetWidth; 
       let incPad = this.state.pad+25;
       if(incPad>width)
       incPad = width;    
@@ -105,7 +105,7 @@ class Run extends React.Component {
   
     render() {
         return (
-          <div>
+          <div ref={foo => {this.reqDiv = foo}}>
             <div style={{paddingLeft:this.state.pad,height:95}}>
               <img src={this.state.image}></img>              
             </div>
