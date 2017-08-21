@@ -96,7 +96,7 @@ class Run extends React.Component {
 
     changeImage(){
       let currentPos = this.state.pos; 
-      let width = this.reqDiv.offsetWidth; 
+      let width = this.reqDiv.offsetWidth-45; 
       let incPad = this.state.pad+25;
       if(incPad>width)
       incPad = width;    
