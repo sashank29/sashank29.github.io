@@ -67,7 +67,8 @@ class Run extends React.Component {
         super(props);
         this.imgArray = new Array();
         for(let i=0;i<12;i++){
-          this.imgArray[i] = '/assets/img/'+(i+1)+'.png';
+          this.imgArray[i] = new Image();
+          this.imgArray[i].src = '/assets/img/'+(i+1)+'.png';
         }
         this.state = { image: this.imgArray[0],pos:12,pad:0 };        
         this.changeImage = this.changeImage.bind(this);
