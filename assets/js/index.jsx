@@ -70,7 +70,7 @@ class Run extends React.Component {
           this.imgArray[i] = new Image();
           this.imgArray[i].src = '/assets/img/'+(i+1)+'.png';
         }
-        this.state = { image: this.imgArray[0],pos:12,pad:0 };        
+        this.state = { image: this.imgArray[0].src,pos:12,pad:0 };        
         this.changeImage = this.changeImage.bind(this);
         this.startRunning = this.startRunning.bind(this);
         this.stopRunning = this.stopRunning.bind(this);                
@@ -101,7 +101,7 @@ class Run extends React.Component {
       if(incPad>width)
       incPad = width;    
       let newPad = incPad%width;
-      this.setState({image:this.imgArray[(currentPos%12)],pos:(currentPos+1),pad:newPad});
+      this.setState({image:this.imgArray[(currentPos%12)].src,pos:(currentPos+1),pad:newPad});
     }
   
     render() {
