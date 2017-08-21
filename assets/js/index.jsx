@@ -4,7 +4,9 @@
   this.state = {country:'',
   area:'',
   temp:0,
-  description:''};
+  description:'',
+  disabled:''
+  };
   this.success = this.success.bind(this);
   this.geoFindMe = this.geoFindMe.bind(this);
   }
@@ -24,7 +26,7 @@
              let area = weatherData["name"];
              let description = weatherData["weather"][0]["description"];
              let temp = parseFloat(weatherData["main"]["temp"]);
-             this.setState({country:country,area:area,temp:temp,description:description});
+             this.setState({country:country,area:area,temp:temp,description:description,disabled:""});
 
          }
        }
@@ -36,8 +38,9 @@
    }
 
   geoFindMe() {
-    	jQuery.post( "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyAMUdt7A6rCRgMzsVp3PHsXKDF_f1iGzdI",this.success)
-  .fail(function(err) {
+    this.setState({disabled:"disabled"});
+    jQuery.post( "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyAMUdt7A6rCRgMzsVp3PHsXKDF_f1iGzdI",this.success)
+    .fail(function(err) {
     alert("API Geolocation error! \n\n"+err);
   });
   }
@@ -48,7 +51,7 @@
     let temp = (t===-273.15)? (<span></span>):(<span>{t.toPrecision(4)} &#8451;</span>);
   return(
   <div>
-  <p><button onClick={this.geoFindMe}>
+  <p><button onClick={this.geoFindMe} disabled={this.state.disabled}>
   Get your local weather Information 
   </button></p>
   <ul>
@@ -108,7 +111,7 @@ class Run extends React.Component {
         return (
           <div ref={foo => {this.reqDiv = foo}}>
             <div style={{paddingLeft:this.state.pad,height:95}}>
-              <img height="91" width="68" src={this.state.image}></img>              
+              <img src={this.state.image}></img>              
             </div>
             <button type="button" onClick={this.startRunning} >Make him run! faster n faster..</button>
             <button type="button" onClick={this.stopRunning} >Stop him</button>
