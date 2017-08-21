@@ -96,7 +96,7 @@ class Run extends React.Component {
 
     changeImage(){
       let currentPos = this.state.pos; 
-      let width = this.reqDiv.offsetWidth-45; 
+      let width = this.reqDiv.offsetWidth-68; 
       let incPad = this.state.pad+25;
       if(incPad>width)
       incPad = width;    
@@ -108,7 +108,7 @@ class Run extends React.Component {
         return (
           <div ref={foo => {this.reqDiv = foo}}>
             <div style={{paddingLeft:this.state.pad,height:95}}>
-              <img height="87" width="45" src={this.state.image}></img>              
+              <img height="91" width="68" src={this.state.image}></img>              
             </div>
             <button type="button" onClick={this.startRunning} >Make him run! faster n faster..</button>
             <button type="button" onClick={this.stopRunning} >Stop him</button>
