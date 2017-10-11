@@ -72,6 +72,11 @@ body {
     transform: translateY(-50%);
     height:20%;
 }
+
+#email{
+  color: #ffffff;
+}
+
 /*
  * Header
  */
