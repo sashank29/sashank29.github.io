@@ -51,7 +51,7 @@
     let temp = (t===-273.15)? (<span></span>):(<span>{t.toPrecision(4)} &#8451;</span>);
   return(
   <div>
-  <p><button onClick={this.geoFindMe} disabled={this.state.disabled} class="btn btn-light">
+  <p><button onClick={this.geoFindMe} disabled={this.state.disabled} class={btn,btn-light}>
   Get your local weather Information 
   </button></p>
   <ul>
